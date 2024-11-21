@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-11-15T17:58:14.739011" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes" source="C:\Desenvolvimento\Projetos_VisualCode\Projetos_Robot\tricentis-robot\testes">
+<suite id="s1-s1" name="formularioAuto" source="C:\Desenvolvimento\Projetos_VisualCode\Projetos_Robot\tricentis-robot\testes\formularioAuto.robot">
+<test id="s1-s1-t1" name="Preencher formulário solicitação seguro Automóvel" line="56">
+<kw name="Iniciar testes" owner="Base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-11-15T17:58:16.583214" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Desenvolvimento\\Projetos_VisualCode\\Projetos_Robot\\tricentis-robot\\logs\\browser\\traces\\7fb0ea7e-963f-44fc-96f9-1c16b075f15d"}</msg>
+<msg time="2024-11-15T17:58:16.984727" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Desenvolvimento\\Projetos_VisualCode\\Projetos_Robot\\tricentis-robot\\logs\\browser\\traces\\7fb0ea7e-963f-44fc-96f9-1c16b075f15d"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-11-15T17:58:16.582210" elapsed="0.403511"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-11-15T17:58:20.223508" level="INFO">Successfully initialized new page object and opened url: https://sampleapp.tricentis.com/101/index.php</msg>
+<msg time="2024-11-15T17:58:20.223508" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://sampleapp.tricentis.com/101/index.php</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-11-15T17:58:16.985721" elapsed="3.237787"/>
+</kw>
+<status status="PASS" start="2024-11-15T17:58:16.581214" elapsed="3.642294"/>
+</kw>
+<kw name="Validação texto home" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:20.284504" level="INFO">Waited for Element with selector xpath=//h2[contains(text(),'Welcome Aboard!')] at state visible</msg>
+<arg>xpath=//h2[contains(text(),'Welcome Aboard!')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.225503" elapsed="0.060002"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:20.344505" level="INFO">Text: 'Welcome Aboard!'</msg>
+<arg>xpath=//h2[contains(text(),'Welcome Aboard!')]</arg>
+<arg>equal</arg>
+<arg>${Texto_validacao}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.285505" elapsed="0.059000"/>
+</kw>
+<arg>Welcome Aboard!</arg>
+<status status="PASS" start="2024-11-15T17:58:20.224506" elapsed="0.119999"/>
+</kw>
+<kw name="Acesso ao menu Automobile" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:20.358508" level="INFO">Waited for Element with selector xpath=(//a[contains(@id,'automobile')])[1] at state visible</msg>
+<arg>xpath=(//a[contains(@id,'automobile')])[1]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.346504" elapsed="0.012004"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:20.359514" level="INFO">Clicks the element 'xpath=(//a[contains(@id,'automobile')])[1]'.</msg>
+<arg>xpath=(//a[contains(@id,'automobile')])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.358508" elapsed="0.283757"/>
+</kw>
+<status status="PASS" start="2024-11-15T17:58:20.345507" elapsed="0.296758"/>
+</kw>
+<kw name="Validação texto primeira parte do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:20.719040" level="INFO">Waited for Element with selector xpath=//label[contains(.,'Make')] at state visible</msg>
+<arg>xpath=//label[contains(.,'Make')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.643255" elapsed="0.075785"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.608591" level="INFO">Text: 'Make'</msg>
+<arg>xpath=//label[contains(.,'Make')]</arg>
+<arg>equal</arg>
+<arg>${Texto_primeira_parte}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:20.720031" elapsed="0.888560"/>
+</kw>
+<arg>Make</arg>
+<status status="PASS" start="2024-11-15T17:58:20.643255" elapsed="0.965336"/>
+</kw>
+<kw name="Preenchimento primeira parte do formulário" owner="FormularioAuto">
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:21.612593" level="INFO">Selects the option(s) BMW by attribute SelectAttribute.label from element id=make.</msg>
+<arg>id=make</arg>
+<arg>text</arg>
+<arg>${Make}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.610583" elapsed="0.072003"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.684582" level="INFO">Fills the text '2000' in the given field.</msg>
+<arg>id=engineperformance</arg>
+<arg>${Performance }</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.683584" elapsed="0.033993"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.718580" level="INFO">Fills the text '10/03/2024' in the given field.</msg>
+<arg>css=input[id=dateofmanufacture]</arg>
+<arg>${Date_of_Manufacture}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.717577" elapsed="0.043005"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:21.763583" level="INFO">Selects the option(s) 2 by attribute SelectAttribute.label from element id=numberofseats.</msg>
+<arg>id=numberofseats</arg>
+<arg>text</arg>
+<arg>${Number_of_Seats}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.761618" elapsed="0.055959"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:21.818581" level="INFO">Selects the option(s) Petrol by attribute SelectAttribute.label from element id=fuel.</msg>
+<arg>id=fuel</arg>
+<arg>text</arg>
+<arg>${Fuel Type}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.817577" elapsed="0.049009"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.867577" level="INFO">Fills the text '33000' in the given field.</msg>
+<arg>id=listprice</arg>
+<arg>${List_Price}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.866586" elapsed="0.037998"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.906588" level="INFO">Fills the text '33' in the given field.</msg>
+<arg>id=licenseplatenumber</arg>
+<arg>${License_Plate_Number}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.905586" elapsed="0.043474"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:21.951007" level="INFO">Fills the text '3333' in the given field.</msg>
+<arg>id=annualmileage</arg>
+<arg>${Annual_Mileage}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.949060" elapsed="0.032949"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:21.983003" level="INFO">Clicks the element 'id=nextenterinsurantdata'.</msg>
+<arg>id=nextenterinsurantdata</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:21.982009" elapsed="0.158993"/>
+</kw>
+<arg>${Make}</arg>
+<arg>${Engine_Performance}</arg>
+<arg>${Date_of_Manufacture}</arg>
+<arg>${Number_of_Seats}</arg>
+<arg>${Fuel_Type}</arg>
+<arg>${List_Price}</arg>
+<arg>${License_Plate_Number}</arg>
+<arg>${Annual_Mileage}</arg>
+<status status="PASS" start="2024-11-15T17:58:21.609587" elapsed="0.532415"/>
+</kw>
+<kw name="Validação texto segunda parte do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:22.160005" level="INFO">Waited for Element with selector xpath=//label[contains(.,'First Name')] at state visible</msg>
+<arg>xpath=//label[contains(.,'First Name')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.144018" elapsed="0.015987"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.208003" level="INFO">Text: 'First Name'</msg>
+<arg>xpath=//label[contains(.,'First Name')]</arg>
+<arg>equal</arg>
+<arg>${Texto_segunda_parte}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.161007" elapsed="0.046996"/>
+</kw>
+<arg>First Name</arg>
+<status status="PASS" start="2024-11-15T17:58:22.143006" elapsed="0.064997"/>
+</kw>
+<kw name="Preenchimento segunda parte do formulário" owner="FormularioAuto">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.212008" level="INFO">Fills the text 'Eduardo' in the given field.</msg>
+<arg>id=firstname</arg>
+<arg>${First_Name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.211007" elapsed="0.041006"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.254026" level="INFO">Fills the text 'Maia' in the given field.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.252013" elapsed="0.061998"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.316017" level="INFO">Fills the text '07/19/1986' in the given field.</msg>
+<arg>id=birthdate</arg>
+<arg>${Birthdate}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.315010" elapsed="0.052003"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:22.370008" level="INFO">Clicks the element 'xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Male')]'.</msg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Male')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.369013" elapsed="0.105003"/>
+</kw>
+<arg>'${Gender}' == 'Male'</arg>
+<arg>Click</arg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Male')]</arg>
+<arg>ELSE</arg>
+<arg>Click</arg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Female')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.368014" elapsed="0.106002"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.476015" level="INFO">Fills the text 'Rua teste' in the given field.</msg>
+<arg>id=streetaddress</arg>
+<arg>${streetaddress}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.475011" elapsed="0.027009"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:22.504009" level="INFO">Selects the option(s) Brazil by attribute SelectAttribute.label from element id=country.</msg>
+<arg>id=country</arg>
+<arg>text</arg>
+<arg>${country}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.503005" elapsed="0.096402"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.601402" level="INFO">Fills the text '04300000' in the given field.</msg>
+<arg>id=zipcode</arg>
+<arg>${zipcode}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.600402" elapsed="0.032005"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.634405" level="INFO">Fills the text 'São Paulo' in the given field.</msg>
+<arg>id=city</arg>
+<arg>${city}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.632407" elapsed="0.043998"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:22.677408" level="INFO">Selects the option(s) Employee by attribute SelectAttribute.label from element id=occupation.</msg>
+<arg>id=occupation</arg>
+<arg>text</arg>
+<arg>${occupation}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.676405" elapsed="0.044563"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:22.722968" level="INFO">Clicks the element 'xpath=//label[contains(.,'Skydiving')]'.</msg>
+<arg>xpath=//label[contains(.,'${Hobbies}')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.721976" elapsed="0.072997"/>
+</kw>
+<arg>'${Hobbies}' in ['Speeding', 'Bungee Jumping', 'Cliff Diving','Skydiving','Other']</arg>
+<arg>Click</arg>
+<arg>xpath=//label[contains(.,'${Hobbies}')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.721976" elapsed="0.074005"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.798974" level="INFO">Fills the text 'www.teste.com.br' in the given field.</msg>
+<arg>id=website</arg>
+<arg>${Website}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.796981" elapsed="0.031995"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:22.831973" level="INFO">Clicks the element 'id=nextenterproductdata'.</msg>
+<arg>id=nextenterproductdata</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.829971" elapsed="0.116039"/>
+</kw>
+<arg>${First_Name}</arg>
+<arg>${Last_Name}</arg>
+<arg>${Date_of_Birth}</arg>
+<arg>${Gender}</arg>
+<arg>${Street_Address}</arg>
+<arg>${Country}</arg>
+<arg>${Zip_Code}</arg>
+<arg>${City}</arg>
+<arg>${Occupation}</arg>
+<arg>${Hobbies}</arg>
+<arg>${Website}</arg>
+<status status="PASS" start="2024-11-15T17:58:22.209006" elapsed="0.737004"/>
+</kw>
+<kw name="Validação texto terceira parte do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:22.960013" level="INFO">Waited for Element with selector xpath=//label[contains(.,'Start Date')] at state visible</msg>
+<arg>xpath=//label[contains(.,'Start Date')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.948017" elapsed="0.011996"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:22.999020" level="INFO">Text: 'Start Date'</msg>
+<arg>xpath=//label[contains(.,'Start Date')]</arg>
+<arg>equal</arg>
+<arg>${Texto_terceira_parte}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:22.961011" elapsed="0.039012"/>
+</kw>
+<arg>Start Date</arg>
+<status status="PASS" start="2024-11-15T17:58:22.947022" elapsed="0.053001"/>
+</kw>
+<kw name="Preenchimento terceira parte do formulário" owner="FormularioAuto">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:23.003005" level="INFO">Fills the text '10/20/2025' in the given field.</msg>
+<arg>id=startdate</arg>
+<arg>${Start Date}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.002014" elapsed="0.026994"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:23.031008" level="INFO">Selects the option(s) 3.000.000,00 by attribute SelectAttribute.label from element id=insurancesum.</msg>
+<arg>id=insurancesum</arg>
+<arg>text</arg>
+<arg>${Insurance Sum}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.030015" elapsed="0.074989"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:23.105998" level="INFO">Selects the option(s) Super Bonus by attribute SelectAttribute.label from element id=meritrating.</msg>
+<arg>id=meritrating</arg>
+<arg>text</arg>
+<arg>${Merit_Rating}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.105004" elapsed="0.056008"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:23.162011" level="INFO">Selects the option(s) Full Coverage by attribute SelectAttribute.label from element id=damageinsurance.</msg>
+<arg>id=damageinsurance</arg>
+<arg>text</arg>
+<arg>${Magein_surance}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.161012" elapsed="0.041072"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:23.204049" level="INFO">Clicks the element 'xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Legal Defense Insurance')]'.</msg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Legal Defense Insurance')]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.203048" elapsed="0.084016"/>
+</kw>
+<arg>'${Optional_Products}' == 'Euro Protection'</arg>
+<arg>Click</arg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Euro Protection')]</arg>
+<arg>ELSE</arg>
+<arg>Click</arg>
+<arg>xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Legal Defense Insurance')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.203048" elapsed="0.084016"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2024-11-15T17:58:23.288087" level="INFO">Selects the option(s) Yes by attribute SelectAttribute.label from element id=courtesycar.</msg>
+<arg>id=courtesycar</arg>
+<arg>text</arg>
+<arg>${Courtesy_car}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.288087" elapsed="0.040045"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:23.330137" level="INFO">Clicks the element 'id=nextselectpriceoption'.</msg>
+<arg>id=nextselectpriceoption</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.328132" elapsed="0.114115"/>
+</kw>
+<arg>${Start_Date}</arg>
+<arg>${Insurance_Sum}</arg>
+<arg>${Merit_Rating}</arg>
+<arg>${Damage_Insurance}</arg>
+<arg>${Optional_Products}</arg>
+<arg>${Courtesy_Car}</arg>
+<status status="PASS" start="2024-11-15T17:58:23.001007" elapsed="0.441240"/>
+</kw>
+<kw name="Validação texto quarta parte do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:23.459249" level="INFO">Waited for Element with selector xpath=//th[contains(.,'Select Option')] at state visible</msg>
+<arg>xpath=//th[contains(.,'Select Option')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.445237" elapsed="0.014989"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:23.499239" level="INFO">Text: 'Select Option'</msg>
+<arg>xpath=//th[contains(.,'Select Option')]</arg>
+<arg>equal</arg>
+<arg>${Select_Option}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.460226" elapsed="0.039013"/>
+</kw>
+<arg>Select Option</arg>
+<status status="PASS" start="2024-11-15T17:58:23.444232" elapsed="0.055007"/>
+</kw>
+<kw name="Preenchimento quarta parte selecionar preço" owner="FormularioAuto">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:23.502849" level="INFO">Clicks the element 'xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[4]'.</msg>
+<arg>xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[4]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.501858" elapsed="0.096988"/>
+</kw>
+<arg>'${Price}' == 'Silver'</arg>
+<arg>Click</arg>
+<arg>xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[1]</arg>
+<arg>ELSE IF</arg>
+<arg>'${Price}' == 'Gold'</arg>
+<arg>Click</arg>
+<arg>xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[2]</arg>
+<arg>ELSE IF</arg>
+<arg>'${Price}' == 'Platinum'</arg>
+<arg>Click</arg>
+<arg>xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[3]</arg>
+<arg>ELSE</arg>
+<arg>Click</arg>
+<arg>xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[4]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.501226" elapsed="0.097620"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:23.599846" level="INFO">Clicks the element 'id=nextsendquote'.</msg>
+<arg>id=nextsendquote</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:23.598846" elapsed="0.421554"/>
+</kw>
+<arg>${Select_Price}</arg>
+<status status="PASS" start="2024-11-15T17:58:23.500223" elapsed="0.520177"/>
+</kw>
+<kw name="Validação texto quinta parte do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:24.037406" level="INFO">Waited for Element with selector xpath=//div[contains(@class,'field idealforms-field idealforms-field-email')] at state visible</msg>
+<arg>xpath=//div[contains(@class,'field idealforms-field idealforms-field-email')]</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.022430" elapsed="0.014976"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.077402" level="INFO">Text: 'E-Mail'</msg>
+<arg>xpath=//div[contains(@class,'field idealforms-field idealforms-field-email')]</arg>
+<arg>equal</arg>
+<arg>${Email}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.037406" elapsed="0.040997"/>
+</kw>
+<arg>E-Mail</arg>
+<status status="PASS" start="2024-11-15T17:58:24.021409" elapsed="0.056994"/>
+</kw>
+<kw name="Preenchimento quinta parte do formulário" owner="FormularioAuto">
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.083405" level="INFO">Fills the text 'testedoteste@gmail.com' in the given field.</msg>
+<arg>id=email</arg>
+<arg>${E-Mail}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.082404" elapsed="0.027009"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.112415" level="INFO">Fills the text '11999994444' in the given field.</msg>
+<arg>id=phone</arg>
+<arg>${Phone}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.110409" elapsed="0.049999"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.164406" level="INFO">Fills the text 'TesteQA' in the given field.</msg>
+<arg>id=username</arg>
+<arg>${Username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.163410" elapsed="0.042000"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.207417" level="INFO">Fills the text 'Teste@123' in the given field.</msg>
+<arg>id=password</arg>
+<arg>${Password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.206404" elapsed="0.049010"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.257412" level="INFO">Fills the text 'Teste@123' in the given field.</msg>
+<arg>id=confirmpassword</arg>
+<arg>${Confirm_Password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.255414" elapsed="0.052999"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-11-15T17:58:24.310408" level="INFO">Fills the text '"Tudo posso naquele que me fortalece."' in the given field.</msg>
+<arg>id=Comments</arg>
+<arg>${Comments}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.309410" elapsed="0.042588"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:24.352968" level="INFO">Clicks the element 'id=sendemail'.</msg>
+<arg>id=sendemail</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.351998" elapsed="0.078538"/>
+</kw>
+<arg>${E-Mail}</arg>
+<arg>${Phone}</arg>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<arg>${Confirm_Password}</arg>
+<arg>${Comments}</arg>
+<status status="PASS" start="2024-11-15T17:58:24.080404" elapsed="0.350132"/>
+</kw>
+<kw name="Validação do texto de envio e do formulário" owner="FormularioAuto">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-11-15T17:58:33.473541" level="INFO">Waited for Element with selector xpath=//h2[contains(text(),'Sending e-mail success!')] at state visible</msg>
+<arg>xpath=//h2[contains(text(),'Sending e-mail success!')]</arg>
+<arg>visible</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-11-15T17:58:24.432543" elapsed="9.042018"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-11-15T17:58:33.508561" level="INFO">Text: 'Sending e-mail success!'</msg>
+<arg>xpath=//h2[contains(text(),'Sending e-mail success!')]</arg>
+<arg>equal</arg>
+<arg>${texto_Sucess}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:33.474561" elapsed="0.034000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-11-15T17:58:33.509544" level="INFO">Clicks the element 'xpath=//div[@class='sa-confirm-button-container']'.</msg>
+<arg>xpath=//div[@class='sa-confirm-button-container']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-11-15T17:58:33.509544" elapsed="0.118020"/>
+</kw>
+<arg>Sending e-mail success!</arg>
+<status status="PASS" start="2024-11-15T17:58:24.431547" elapsed="9.196017"/>
+</kw>
+<kw name="Encerrar testes" owner="Base" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-11-15T17:58:33.810561" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-11-15T17:58:33.630560" elapsed="0.180001"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2024-11-15T17:58:34.346562" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-15T17:58:33.811565" elapsed="0.534997"/>
+</kw>
+<status status="PASS" start="2024-11-15T17:58:33.628565" elapsed="0.718996"/>
+</kw>
+<status status="PASS" start="2024-11-15T17:58:16.574240" elapsed="17.773321"/>
+</test>
+<doc>Automação preenchimento formulário / Automóvél</doc>
+<status status="PASS" start="2024-11-15T17:58:14.800755" elapsed="19.617810"/>
+</suite>
+<status status="PASS" start="2024-11-15T17:58:14.742758" elapsed="19.743831"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="formularioAuto">Testes.formularioAuto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
