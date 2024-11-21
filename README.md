@@ -4,7 +4,7 @@ Este projeto foi desenvolvido para automatizar testes de uma aplicação web uti
 
 ## Objetivo
 
-Automatizar os testes de funcionalidade da aplicação no site [Tricentis](hhttps://sampleapp.tricentis.com/101/index.php), garantindo que o comportamento esperado seja mantido durante o desenvolvimento.
+Automatizar os testes de funcionalidade da aplicação no site [Tricentis](https://sampleapp.tricentis.com/101/index.php), garantindo que o comportamento esperado seja mantido durante o desenvolvimento.
 
 ## Requisitos
 
