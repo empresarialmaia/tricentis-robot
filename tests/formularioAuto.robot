@@ -34,7 +34,7 @@ ${Website}               www.teste.com.br
 
 ###Enter Product Data
 ${Start_Date}            10/20/2025
-${Insurance_Sum}          3.000.000,00 
+${Insurance_Sum}         3.000.000,00 
 ${Merit_Rating}          Super Bonus 
 ${Damage_Insurance}      Full Coverage
 ${Optional_Products}     Legal Defense Insurance 

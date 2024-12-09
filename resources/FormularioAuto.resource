@@ -25,7 +25,7 @@ Validação texto primeira parte do formulário
 
     #Primeira parte do formulário
 Preenchimento primeira parte do formulário       
-    [Arguments]    ${Make}    ${Performance }    ${Date_of_Manufacture}    ${Number_of_Seats}    ${Fuel Type}
+    [Arguments]    ${Make}    ${Performance}    ${Date_of_Manufacture}    ${Number_of_Seats}    ${Fuel_Type}
     ...            ${List_Price}    ${License_Plate_Number}    ${Annual_Mileage}
     
     Select Options By          id=make                                      text       ${Make} 
@@ -35,7 +35,7 @@ Preenchimento primeira parte do formulário
 
     Select Options By          id=numberofseats                             text       ${Number_of_Seats} 
 
-    Select Options By          id=fuel                                      text       ${Fuel Type}
+    Select Options By          id=fuel                                      text       ${Fuel_Type}
 
     Fill Text                  id=listprice                                            ${List_Price} 
 
@@ -56,25 +56,25 @@ Validação texto segunda parte do formulário
         
     #Segunda parte do formulário
 Preenchimento segunda parte do formulário
-   [Arguments]    ${First_Name}    ${Lastname}    ${birthdate}    ${Gender}    ${Streetaddress}      
-   ...            ${Country}    ${Zipcode}    ${City}    ${Occupation}    ${Hobbies}    ${Website} 
+   [Arguments]    ${First_Name}    ${Last_Name}    ${birthdate}    ${Gender}    ${Street_Address}      
+   ...            ${Country}    ${Zip_Code}    ${City}    ${Occupation}    ${Hobbies}    ${Website} 
        
    
     Fill Text                   id=firstname                                          ${First_Name}  
 
-    Fill Text                   id=lastname                                           ${Lastname}  
+    Fill Text                   id=lastname                                           ${Last_Name}  
 
     Fill Text                   id=birthdate                                          ${Birthdate} 
     
     Run Keyword If    '${Gender}' == 'Male'    Click    xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Male')]
     ...    ELSE                                Click    xpath=//label[@class='ideal-radiocheck-label'][contains(.,'Female')]
        
-    Fill Text                   id=streetaddress                                      ${streetaddress}   
+    Fill Text                   id=streetaddress                                      ${Street_Address}   
     
           
     Select Options By           id=country                                      text  ${country} 
 
-    Fill Text                   id=zipcode                                            ${zipcode} 
+    Fill Text                   id=zipcode                                            ${Zip_Code} 
     
     Fill Text                   id=city                                               ${city}    
 
@@ -123,10 +123,10 @@ Validação texto quarta parte do formulário
 Preenchimento quarta parte selecionar preço
     [Arguments]    ${Price}    
 
-    Run Keyword If        '${Price}' == 'Silver'         Click    xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[1]
-...    ELSE IF            '${Price}' == 'Gold'           Click    xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[2]
-...    ELSE IF            '${Price}' == 'Platinum'       Click    xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[3]  
-...    ELSE                                              Click    xpath=(//label[contains(@class,'choosePrice ideal-radiocheck-label')])[4]
+    Run Keyword If        '${Price}' == 'Silver'         Click    xpath=//label[contains(@class,'choosePrice ideal-radiocheck-label')][1]
+...    ELSE IF            '${Price}' == 'Gold'           Click    xpath=//label[contains(@class,'choosePrice ideal-radiocheck-label')][2]
+...    ELSE IF            '${Price}' == 'Platinum'       Click    xpath=//label[contains(@class,'choosePrice ideal-radiocheck-label')][3]  
+...    ELSE                                              Click    xpath=//label[contains(@class,'choosePrice ideal-radiocheck-label')][4]
             
     Click    id=nextsendquote
 
